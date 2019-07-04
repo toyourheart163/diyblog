@@ -1,5 +1,11 @@
-{% extents 'base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-
+<h1>All blogs</h1>
+<ul>
+    {% for blog in blog_list %}
+    <li>
+        <a href="{{ blog.get_abosulote_url }}">{{ blog.name }}</a> {{ blog.post_date }} - <a href="">{{ blog.author }}</a></li>
+    {% endfor %}
+</ul>
 {% endblock %}

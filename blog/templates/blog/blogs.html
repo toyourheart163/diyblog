@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ul>
+    {% for blog in blogs %}
+    <li>{{ blog.name }} {{ blog.author }} {{ blog.post_date }}</li>
+</ul>
+{% endblock %}
