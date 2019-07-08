@@ -7,6 +7,9 @@ from .models import Blog, BlogAuthor, BlogComment
 def index(request):
     return render(request, 'index.html')
 
+def home(request):
+    return render(request, 'home.html')
+
 class BlogListView(generic.ListView):
     model = Blog
     paginate_by = 5
